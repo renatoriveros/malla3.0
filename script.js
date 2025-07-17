@@ -1,4 +1,11 @@
+console.log("Carga exitosa - Malla UGM");
+
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.innerHTML = '<h1 style="color:red">¡Funciona!</h1>';
-  console.log("Script cargado correctamente");
+    const container = document.querySelector('.container');
+    container.innerHTML += `
+        <h2>Universidad Gabriela Mistral</h2>
+        <div class="controls">
+            <button>Prueba botón</button>
+        </div>
+    `;
 });
