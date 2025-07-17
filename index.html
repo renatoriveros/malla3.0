@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular - Psicología UGM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Malla Curricular de Psicología</h1>
+            <h2>Universidad Gabriela Mistral - 10 Semestres</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <span id="progress-text">0% completado</span>
+            </div>
+        </header>
 
+        <div class="controls">
+            <button id="view-btn">Vista General</button>
+            <button id="reset-btn">Reiniciar Progreso</button>
+        </div>
+
+        <div class="years-container" id="years-container">
+            <!-- Los años y semestres se generarán dinámicamente -->
+        </div>
+
+        <div class="course-modal hidden" id="course-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modal-title">Título del Curso</h2>
+                <div class="modal-body">
+                    <p><strong>Semestre:</strong> <span id="modal-semester"></span></p>
+                    <p><strong>Requisitos:</strong> <span id="modal-requirements"></span></p>
+                    <p><strong>Desbloquea:</strong> <span id="modal-unlocks"></span></p>
+                    <p><strong>Estado:</strong> <span id="modal-status"></span></p>
+                </div>
+                <button id="toggle-course">Marcar como aprobado</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
