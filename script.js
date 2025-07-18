@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Datos de la malla curricular
+    // Datos completos de la malla curricular (10 semestres)
     const curriculum = [
-        // Año 1
+        // Año 1 - Semestre 1
         {
             semester: 1,
             year: 1,
@@ -44,9 +44,333 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             ]
         },
-        // (Continúa con todos los semestres como en el código original)
-        // ...
-        // Año 5
+        // Año 1 - Semestre 2
+        {
+            semester: 2,
+            year: 1,
+            courses: [
+                {
+                    code: "PSI201",
+                    name: "Procesos Psicológicos",
+                    unlocks: ["PSI301", "PSI302", "TIN101", "TEP101", "TEP102"],
+                    requirements: ["PSI101"]
+                },
+                {
+                    code: "PSI202",
+                    name: "Teoría de Psicología social",
+                    unlocks: ["PSI303", "TEP101", "TEP102"],
+                    requirements: ["PSI102"]
+                },
+                {
+                    code: "PSI203",
+                    name: "Neurociencia cognitiva y del desarrollo",
+                    unlocks: ["PSI304", "TEP101", "TEP102"],
+                    requirements: ["PSI103"]
+                },
+                {
+                    code: "PSI204",
+                    name: "Modelos sistémicos",
+                    unlocks: ["TIN101", "TEP101", "TEP102"],
+                    requirements: []
+                },
+                {
+                    code: "MET101",
+                    name: "Metodología de la investigación",
+                    unlocks: ["PSI501", "TIN101", "TEP101", "TEP102"],
+                    requirements: []
+                },
+                {
+                    code: "ING102",
+                    name: "Inglés 2",
+                    unlocks: ["ING103", "TIN101", "TEP101", "TEP102"],
+                    requirements: ["ING101"]
+                }
+            ]
+        },
+        // Año 2 - Semestre 3
+        {
+            semester: 3,
+            year: 2,
+            courses: [
+                {
+                    code: "PSI301",
+                    name: "Personalidad",
+                    unlocks: ["PSI401", "PSI402", "TIN101", "TEP101", "TEP102"],
+                    requirements: ["PSI201"]
+                },
+                {
+                    code: "PSI302",
+                    name: "Psicología del desarrollo",
+                    unlocks: ["PSI403", "TIN101", "TEP101", "TEP102"],
+                    requirements: ["PSI201"]
+                },
+                {
+                    code: "PSI303",
+                    name: "Psicología social aplicada",
+                    unlocks: ["PSI404", "PSI405", "PSI406", "TEP101", "TEP102"],
+                    requirements: ["PSI202"]
+                },
+                {
+                    code: "PSI304",
+                    name: "Neurociencias afectiva y social",
+                    unlocks: ["TIN101"],
+                    requirements: ["PSI203"]
+                },
+                {
+                    code: "MOD301",
+                    name: "Modelos cognitivos conductual",
+                    unlocks: ["TIN101", "TEP101", "TEP102"],
+                    requirements: []
+                },
+                {
+                    code: "ING103",
+                    name: "Inglés 3",
+                    unlocks: ["TIN101", "TEP101", "TEP102"],
+                    requirements: ["ING102"]
+                }
+            ]
+        },
+        // Año 2 - Semestre 4
+        {
+            semester: 4,
+            year: 2,
+            courses: [
+                {
+                    code: "PSI401",
+                    name: "Psicopatología",
+                    unlocks: ["PSI502", "TEP101", "TEP102"],
+                    requirements: ["PSI301"]
+                },
+                {
+                    code: "PSI402",
+                    name: "Técnicas de evaluación psicológica",
+                    unlocks: ["PSI503", "TEP101", "TEP102"],
+                    requirements: ["PSI301"]
+                },
+                {
+                    code: "PSI403",
+                    name: "Psicología del desarrollo 2",
+                    unlocks: ["PSI504", "TEP101", "TEP102"],
+                    requirements: ["PSI302"]
+                },
+                {
+                    code: "MOD401",
+                    name: "Modelos psicoanalíticos",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: []
+                },
+                {
+                    code: "MOD402",
+                    name: "Modelo humanista experiencial",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: []
+                },
+                {
+                    code: "TIN101",
+                    name: "Taller de integración 1",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: ["PSI101", "PSI102", "PSI103", "PSI104", "ING101", "HFI101", "PSI201", "PSI202", "PSI203", "PSI204", "MET101", "ING102"]
+                },
+                {
+                    code: "EFI101",
+                    name: "Electivo de formación integral 1",
+                    unlocks: ["EFI102", "TEP101", "TEP102"],
+                    requirements: []
+                }
+            ]
+        },
+        // Año 3 - Semestre 5
+        {
+            semester: 5,
+            year: 3,
+            courses: [
+                {
+                    code: "PSI501",
+                    name: "Métodos cuantitativos en psicología",
+                    unlocks: ["PSI602", "TEP101", "TEP102"],
+                    requirements: ["MET101"]
+                },
+                {
+                    code: "PSI502",
+                    name: "Psiquiatría",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: ["PSI401"]
+                },
+                {
+                    code: "PSI503",
+                    name: "Diagnóstico clínico adulto 1",
+                    unlocks: ["PSI701", "PSI703", "TEP101", "TEP102"],
+                    requirements: ["PSI402"]
+                },
+                {
+                    code: "PSI504",
+                    name: "Clínica infanto juvenil",
+                    unlocks: ["PSI702", "TEP101", "TEP102"],
+                    requirements: ["PSI403"]
+                },
+                {
+                    code: "PSI505",
+                    name: "Psicología del trabajo y las organizaciones",
+                    unlocks: ["PSI506", "TEP101", "TEP102"],
+                    requirements: ["PSI303"]
+                },
+                {
+                    code: "PSI506",
+                    name: "Intervenciones en contextos organizacionales",
+                    unlocks: ["TIN201", "TEP101", "TEP102"],
+                    requirements: ["PSI505"]
+                },
+                {
+                    code: "PSI507",
+                    name: "Psicología educacional",
+                    unlocks: ["PSI603", "TEP101", "TEP102"],
+                    requirements: ["PSI303"]
+                },
+                {
+                    code: "EFI102",
+                    name: "Electivo de formación integral 2",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: ["EFI101"]
+                }
+            ]
+        },
+        // Año 3 - Semestre 6
+        {
+            semester: 6,
+            year: 3,
+            courses: [
+                {
+                    code: "PSI601",
+                    name: "Intervención en psicología educativa",
+                    unlocks: ["TIN201", "TEP101", "TEP102"],
+                    requirements: ["PSI507"]
+                },
+                {
+                    code: "PSI602",
+                    name: "Métodos cualitativos en psicología",
+                    unlocks: ["PSI801", "TEP101", "TEP102"],
+                    requirements: ["PSI501"]
+                },
+                {
+                    code: "PSI603",
+                    name: "Psicodiagnóstico infanto juvenil",
+                    unlocks: ["PSI802", "TIN201", "TEP101", "TEP102"],
+                    requirements: ["PSI504"]
+                },
+                {
+                    code: "PSI604",
+                    name: "Introducción a la psicología clínica",
+                    unlocks: ["PSI803", "TIN201", "TEP101", "TEP102"],
+                    requirements: ["PSI503"]
+                },
+                {
+                    code: "PSI605",
+                    name: "Diagnóstico clínico adulto 2",
+                    unlocks: ["TIN201", "TEP101", "TEP102"],
+                    requirements: ["PSI503"]
+                }
+            ]
+        },
+        // Año 4 - Semestre 7
+        {
+            semester: 7,
+            year: 4,
+            courses: [
+                {
+                    code: "PSI701",
+                    name: "Psicología jurídica",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: ["PSI503"]
+                },
+                {
+                    code: "PSI702",
+                    name: "Psicoterapia infanto juvenil",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: ["PSI603"]
+                },
+                {
+                    code: "PSI703",
+                    name: "Intervenciones en psicología clínica",
+                    unlocks: ["TIN201", "TEP101", "TEP102"],
+                    requirements: ["PSI604"]
+                },
+                {
+                    code: "PSI704",
+                    name: "Psicología comunitaria",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: []
+                },
+                {
+                    code: "ESE101",
+                    name: "Electivo de especialidad 1",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: []
+                },
+                {
+                    code: "TIN201",
+                    name: "Taller de integración 2",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: ["PSI506", "PSI601", "PSI603", "PSI604", "PSI605", "PSI703"]
+                }
+            ]
+        },
+        // Año 4 - Semestre 8
+        {
+            semester: 8,
+            year: 4,
+            courses: [
+                {
+                    code: "PSI801",
+                    name: "Seminario de investigación 1",
+                    unlocks: ["PSI901", "EGR101", "TEP101", "TEP102"],
+                    requirements: ["PSI602"]
+                },
+                {
+                    code: "PSI802",
+                    name: "Examen de grado",
+                    unlocks: ["PPR101"],
+                    requirements: ["PSI801"]
+                },
+                {
+                    code: "ESE102",
+                    name: "Electivo de especialidad 2",
+                    unlocks: ["TEP101", "TEP102"],
+                    requirements: []
+                }
+            ]
+        },
+        // Año 5 - Semestre 9
+        {
+            semester: 9,
+            year: 5,
+            courses: [
+                {
+                    code: "PSI901",
+                    name: "Seminario de investigación 2",
+                    unlocks: ["PPR101"],
+                    requirements: ["PSI801"]
+                },
+                {
+                    code: "TEP101",
+                    name: "Taller de especialización 1",
+                    unlocks: ["PPR101"],
+                    requirements: [] // Se manejará especial en el código
+                },
+                {
+                    code: "TEP102",
+                    name: "Taller de especialización 2",
+                    unlocks: ["PPR101"],
+                    requirements: [] // Se manejará especial en el código
+                },
+                {
+                    code: "EGR101",
+                    name: "Examen de grado",
+                    unlocks: ["PPR101"],
+                    requirements: ["PSI801"]
+                }
+            ]
+        },
+        // Año 5 - Semestre 10
         {
             semester: 10,
             year: 5,
@@ -91,29 +415,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Variables temporales
     let currentCourse = null;
 
-    // Inicializar la aplicación
-    function init() {
-        renderYears();
-        updateProgress();
-        setupEventListeners();
-        console.log("Aplicación inicializada correctamente");
-    }
-
-    // Renderizar por años y semestres
+    // Función para renderizar todos los años y semestres
     function renderYears() {
         yearsContainer.innerHTML = '';
         
+        // Ordenar el curriculum por año y semestre
+        const sortedCurriculum = [...curriculum].sort((a, b) => {
+            if (a.year !== b.year) return a.year - b.year;
+            return a.semester - b.semester;
+        });
+
         // Agrupar por años
         const years = {};
-        curriculum.forEach(semesterData => {
+        sortedCurriculum.forEach(semesterData => {
             if (!years[semesterData.year]) {
                 years[semesterData.year] = [];
             }
             years[semesterData.year].push(semesterData);
         });
         
-        // Crear columnas por año
-        for (const [year, semesters] of Object.entries(years)) {
+        // Crear columnas por año en orden
+        const sortedYears = Object.keys(years).sort((a, b) => a - b);
+        for (const year of sortedYears) {
             const yearColumn = document.createElement('div');
             yearColumn.className = 'year-column';
             
@@ -122,8 +445,8 @@ document.addEventListener('DOMContentLoaded', function() {
             titleEl.textContent = `Año ${year}`;
             yearColumn.appendChild(titleEl);
             
-            // Agregar semestres
-            semesters.forEach(semesterData => {
+            // Agregar semestres para este año
+            years[year].forEach(semesterData => {
                 const semesterEl = document.createElement('div');
                 semesterEl.className = 'semester';
                 
@@ -326,6 +649,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Iniciar la aplicación
+    function init() {
+        renderYears();
+        updateProgress();
+        setupEventListeners();
+        console.log("Aplicación inicializada correctamente");
+    }
+
     init();
 
     // Verificación final
