@@ -6,6 +6,7 @@
     --background-color: #fff0f6;
     --text-color: #4a2c40;
     --border-color: #d48fb1;
+    --completed-color: #8bc34a;
     --locked-color: #e0e0e0;
 }
 
@@ -160,15 +161,9 @@ button:hover {
 }
 
 .course.completed {
-    background-color: var(--primary-color);
+    background-color: var(--completed-color);
     color: white;
-    border-color: var(--primary-dark);
-    box-shadow: 0 3px 6px rgba(232, 67, 147, 0.2);
-}
-
-.course.completed:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
+    border-color: var(--completed-color);
 }
 
 .course.locked {
@@ -217,7 +212,6 @@ button:hover {
     max-width: 500px;
     position: relative;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border: 2px solid var(--primary-color);
 }
 
 .close-modal {
@@ -240,12 +234,6 @@ button:hover {
 #toggle-course {
     width: 100%;
     margin-top: 15px;
-    background-color: var(--primary-color);
-    transition: all 0.3s;
-}
-
-#toggle-course:hover {
-    background-color: var(--primary-dark);
 }
 
 .years-container::-webkit-scrollbar {
@@ -276,13 +264,13 @@ button:hover {
     }
 }
 
-/* Indicador de carga */
+/* Indicador de carga exitosa */
 body::after {
     content: "✅ CSS cargado correctamente";
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background: var(--primary-color);
+    background: var(--completed-color);
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
